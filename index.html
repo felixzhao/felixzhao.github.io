@@ -1,261 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Felixzhao.github.io : " />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Felixzhao.github.io by felixzhao</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Felixzhao.github.io</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>Felixzhao.github.io</h1>
+        <p></p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/felixzhao">View on GitHub</a>
 
-          <h1 id="project_title">Felixzhao.github.io</h1>
-          <h2 id="project_tagline"></h2>
+        <p class="view"><a href="https://github.com/felixzhao">View My GitHub Profile</a></p>
 
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+      </header>
+      <section>
         <h1>
-<a name="felix-zhao" class="anchor" href="#felix-zhao"><span class="octicon octicon-link"></span></a>Felix Zhao</h1>
+<a name="%E4%B8%AD%E6%96%87%E4%B8%80%E7%BB%B4%E7%BC%96%E7%A0%81%E4%B8%8E%E5%AD%97%E6%AF%8D%E6%9B%BF%E6%8D%A2%E8%A7%A3%E7%A0%81" class="anchor" href="#%E4%B8%AD%E6%96%87%E4%B8%80%E7%BB%B4%E7%BC%96%E7%A0%81%E4%B8%8E%E5%AD%97%E6%AF%8D%E6%9B%BF%E6%8D%A2%E8%A7%A3%E7%A0%81"><span class="octicon octicon-link"></span></a>中文一维编码与字母替换解码</h1>
 
-<h2>
-<a name="developer" class="anchor" href="#developer"><span class="octicon octicon-link"></span></a>Developer</h2>
+<p>author: 赵铨
+date: 六月九日</p>
 
-<h2>
-<a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a><img src="/images/felixzhao.png" alt="flag">
-</h2>
+<h1>
+<a name="%E5%AD%97%E6%AF%8D%E6%9B%BF%E6%8D%A2%E8%A7%A3%E7%A0%81" class="anchor" href="#%E5%AD%97%E6%AF%8D%E6%9B%BF%E6%8D%A2%E8%A7%A3%E7%A0%81"><span class="octicon octicon-link"></span></a>字母替换解码</h1>
 
-<blockquote>
-<p><a href="http://felixzhao.github.io">felixzhao.github.io</a></p>
+<p>传统的字母语言，通过字母替换解码来进行机器翻译等工作。</p>
 
-<p><a href="mailto:felixz2010@gmail.com">felixz2010 [at] gmail.com</a></p>
+<p><img src="algo.png" alt="alt text" title="Title"></p>
 
-<p>(86) 18621518021</p>
-</blockquote>
+<p>Here $p(...)$ is a <strong>language model</strong>, $\phi(...)$ is a substitution function.</p>
 
-<hr><h3>
-<a name="education" class="anchor" href="#education"><span class="octicon octicon-link"></span></a>Education</h3>
+<h1>
+<a name="%E5%AD%97%E6%AF%8D%E6%9B%BF%E6%8D%A2%E8%A7%A3%E7%A0%81%E4%B8%8E%E6%B1%89%E5%AD%97%E7%9A%84%E5%85%B3%E7%B3%BB" class="anchor" href="#%E5%AD%97%E6%AF%8D%E6%9B%BF%E6%8D%A2%E8%A7%A3%E7%A0%81%E4%B8%8E%E6%B1%89%E5%AD%97%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="octicon octicon-link"></span></a>字母替换解码与汉字的关系</h1>
 
-<ul>
-<li>2012 - 2014 Shanghai Jiao Tong University
+<p>但该方法对于中文这类非字母语言一直没有用武之地。
+一些采用解码技术的中文的处理也都<strong>将单个汉字作为一个不再分割的单元</strong>进行处理。进而就会遇到问题空间太大的问题。</p>
 
 <ul>
-<li>Master</li>
-<li>Computer Science for NLP Direction</li>
-</ul>
+<li><p>一般字母语言的字母仅几十个；</p></li>
+<li><p>将单个汉字视为一个替换最小单位的情况下，一个汉字的替换可能空间在数千至数万的范围。</p></li>
+</ul><h1>
+<a name="%E6%B1%89%E5%AD%97%E7%9A%84%E7%89%B9%E7%82%B9" class="anchor" href="#%E6%B1%89%E5%AD%97%E7%9A%84%E7%89%B9%E7%82%B9"><span class="octicon octicon-link"></span></a>汉字的特点</h1>
+
+<ul>
+<li><p>实际汉字并不如字母一般不可分割。</p></li>
+<li><p>汉字本身的部件有表音或表义的功能。
+将其视为一个黑盒，将白白浪费许多有用的信息或线索。</p></li>
+<li><p>粗略的看其是有一笔一划组成的。</p></li>
+<li><p>细分的话，有多种划分方式。如，按笔画划分，按部首划分。</p></li>
+<li><p>但无论采用哪种方式划分，我们都可以认为汉字就是这些划分的一维编码。
+为什么可以这么说呢？因为，在康熙字典中已明确给出了大部分汉字的笔顺</p></li>
+<li><p>字型信息 ＋ 笔顺， 汉字这一二维的文字就可以被转为一维编码。</p></li>
+</ul><h1>
+<a name="%E5%AD%97%E5%9E%8B%E4%BF%A1%E6%81%AF%E7%BC%96%E7%A0%81-stoke-feature-coding" class="anchor" href="#%E5%AD%97%E5%9E%8B%E4%BF%A1%E6%81%AF%E7%BC%96%E7%A0%81-stoke-feature-coding"><span class="octicon octicon-link"></span></a>字型信息编码 Stoke Feature Coding</h1>
+
+<p>我们将笔画用字母替代，并按汉字的笔顺编码就可以得到一维的汉字了。
+如： “永”字八笔。
+<img src="es_2.jpg"></p>
+
+<p>我们定义：最小单位为笔画。</p>
+
+<p>如此，字母替换解码的方法将也能够在中文中使用。</p>
+
+<h1>
+<a name="%E7%BC%96%E7%A0%81%E4%B8%BE%E4%BE%8B%E6%B1%89%E5%AD%97%E7%AC%94%E7%94%BB%E7%BC%96%E7%A0%81-stroke-count-method" class="anchor" href="#%E7%BC%96%E7%A0%81%E4%B8%BE%E4%BE%8B%E6%B1%89%E5%AD%97%E7%AC%94%E7%94%BB%E7%BC%96%E7%A0%81-stroke-count-method"><span class="octicon octicon-link"></span></a>编码举例——汉字笔画编码 Stroke count method</h1>
+
+<ul>
+<li>将汉字的笔画进行分类，分为横、竖、撇、点和折。
+<img src="scm.jpg" alt="alt text" title="Title">
 </li>
-<li>2006 - 2009 Fudan University
+<li>于是汉字就可以被视为一种5字母的语言。</li>
+</ul><p>横 a，
+竖 b，
+撇 c，
+点 d，
+折 e</p>
 
 <ul>
-<li>Bachelor</li>
-<li>Software Engineering</li>
-</ul>
-</li>
-</ul><hr><h3>
-<a name="tech" class="anchor" href="#tech"><span class="octicon octicon-link"></span></a>Tech</h3>
-
-<ol>
-<li>Dot NET Framework</li>
-<li>Azure</li>
-<li>C#</li>
-<li>WCF</li>
-<li>ASP .NET MVC</li>
-<li>SQL Server</li>
-<li>Python</li>
-<li>Perl</li>
-<li>JavaScript / jQuery</li>
-<li>Git</li>
-</ol><hr><h3>
-<a name="language" class="anchor" href="#language"><span class="octicon octicon-link"></span></a>Language</h3>
+<li><p>之前提到的“永”字可编码为
+dabdaccc</p></li>
+<li><p>笔画编码已被使用在汉字输入法中，编码表已相对成熟。</p></li>
+</ul><h1>
+<a name="%E6%B1%89%E5%AD%97%E4%B8%80%E7%BB%B4%E7%BC%96%E7%A0%81%E7%9A%84%E5%8F%AF%E8%83%BD%E5%BA%94%E7%94%A8" class="anchor" href="#%E6%B1%89%E5%AD%97%E4%B8%80%E7%BB%B4%E7%BC%96%E7%A0%81%E7%9A%84%E5%8F%AF%E8%83%BD%E5%BA%94%E7%94%A8"><span class="octicon octicon-link"></span></a>汉字一维编码的可能应用</h1>
 
 <ul>
-<li>Mandarin *** native language ***</li>
-<li>English *** proficient in both spoken and written English ***</li>
-</ul><hr><h3>
-<a name="experience" class="anchor" href="#experience"><span class="octicon octicon-link"></span></a>Experience</h3>
+<li><p>统计方法与汉字部件信息</p></li>
+<li><p>已有算法的应用</p></li>
+<li><p>一维编码与Deep Learning</p></li>
+<li><p>会有什么惊喜的发现呢？拭目以待。</p></li>
+</ul><h1>
+<a name="%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E4%B8%8E%E6%B1%89%E5%AD%97%E9%83%A8%E4%BB%B6%E4%BF%A1%E6%81%AF" class="anchor" href="#%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E4%B8%8E%E6%B1%89%E5%AD%97%E9%83%A8%E4%BB%B6%E4%BF%A1%E6%81%AF"><span class="octicon octicon-link"></span></a>统计方法与汉字部件信息</h1>
 
 <ul>
-<li>
-<p>2013.04--Now HP</p>
+<li><p>汉字的部首等部件包含有意义或发音等信息。</p></li>
+<li><p>这些在传统的表示系统中需要通过附加的规则来进行表示，一些特例情况较难处理。</p></li>
+<li><p>将汉字转为一维表示后，我们可以通过<strong>统计的方式</strong>来这些相关的信息，特例将会依据前后的字母组合来滤除。</p></li>
+</ul><h1>
+<a name="%E5%B7%B2%E6%9C%89%E7%AE%97%E6%B3%95%E7%9A%84%E5%BA%94%E7%94%A8" class="anchor" href="#%E5%B7%B2%E6%9C%89%E7%AE%97%E6%B3%95%E7%9A%84%E5%BA%94%E7%94%A8"><span class="octicon octicon-link"></span></a>已有算法的应用</h1>
 
 <ul>
-<li>Special List Level 4</li>
-<li>Shanghai, Beijing</li>
-<li>Business Intelligence Analysis for Commercial Team.</li>
-<li>Achievements:
-
-<ol>
-<li>Online Review Tools for HP China sales group preference review;</li>
-<li>I am regularly located between Shanghai office and Beijing headquarter.</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>
-<p>2010--2013 Microsoft ( contract with Beyondsoft )</p>
+<li><p>基于汉字一维编码的语料的传统字母替换解码算法实践，减少替换问题空间。</p></li>
+<li><p>汉字是否将不再是一类特例来处理，所有应用于字母语言的技术都可应用于汉语这类都书写系统。</p></li>
+</ul><h1>
+<a name="%E4%B8%80%E7%BB%B4%E7%BC%96%E7%A0%81%E4%B8%8Edeep-learning" class="anchor" href="#%E4%B8%80%E7%BB%B4%E7%BC%96%E7%A0%81%E4%B8%8Edeep-learning"><span class="octicon octicon-link"></span></a>一维编码与Deep Learning</h1>
 
 <ul>
-<li>SDE software develop engineer</li>
-<li>Redmond U.S., Shanghai China</li>
-<li>Lead an offshore team</li>
-<li>I am regularly located between Redmond Main campus and Shanghai campus.</li>
-<li>Working for Microsoft CLiX Team
+<li><p>在使用deep learning 时中文语料中的每一个字都是独立的黑盒。</p></li>
+<li><p>但如果我们使用汉字一维编码，我们可有一个新的层来统计部件（如笔画）之间的组合。</p></li>
+<li><p>一些表音的组合，或是偏旁信息便可被统计的到。作为下一个隐层的输入。</p></li>
+<li><p>带有更细粒度的隐层，是否更有助于提高算法的效果。</p></li>
+</ul><h1>
+<a name="question-list" class="anchor" href="#question-list"><span class="octicon octicon-link"></span></a>Question List</h1>
 
 <ul>
-<li>Imassive documents analysis platform Develop.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>2009--2010 Shanghai Transportation Investment Information Technology CO,LTD.</p>
+<li>Wrtting System</li>
+<li>偏旁，部首这两个词的翻译</li>
+</ul><h1></h1>
 
-<ul>
-<li>Software Developer</li>
-<li>Shanghai China</li>
-<li>A State Owned Company.</li>
-<li>Play DEV role for Transportation intelligent system development.</li>
-<li>Achievements:
-
-<ul>
-<li>Shanghai Bus Company working schedule system;</li>
-<li>Shanghai Bus Company working schedule generate project replaced manual work with automatic generation. </li>
-<li>This project has been widely accepted and used in Shanghai BASHI Group.</li>
-<li>I Designed the *** MinSet algorithm *** to improve the Algorithm performance from exponential to O(1).</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>before 2008 China Construction Bank</p>
-
-<ul>
-<li>staff</li>
-<li>Mainframe computer operations and management.</li>
-</ul>
-</li>
-</ul><hr><h3>
-<a name="project" class="anchor" href="#project"><span class="octicon octicon-link"></span></a>Project</h3>
-
-<ul>
-<li>CliX Content QA System
-
-<ul>
-<li>Content QA Gateway Service
-
-<ul>
-<li>This service is an interface for outside system</li>
-<li>Independntly complete development</li>
-<li>Familar with \textbf{Restful} techncial</li>
-</ul>
-</li>
-<li>Content QA Syndication Service
-
-<ul>
-<li>This service is duty to expose feeds</li>
-<li>Independntly complete development</li>
-<li>Familar with WCF syndication</li>
-</ul>
-</li>
-<li>Stringy Plugin
-
-<ul>
-<li>This plugin is a component of QA system which detects key word in documents</li>
-<li>Maintain this plugin and add new features</li>
-</ul>
-</li>
-<li>Language Detect Plugin
-
-<ul>
-<li>This plugin is a component of QA system which detects language of each document</li>
-<li>Design and develop this plugin</li>
-<li>*** Host Perl code in IIS. ***
-
-<ul>
-<li>Content QA Controller Service</li>
-</ul>
-</li>
-<li>This service is the core of Content QA system</li>
-<li>Maintain this service and add new feature</li>
-<li>Refactor job scheduling</li>
-</ul>
-</li>
-<li>Content QA Controller Azure platform
-
-<ul>
-<li>Upgrade system to Azure platform</li>
-<li>Create work role</li>
-<li>Familar with \textbf{Azure} platform.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul><hr><h3>
-<a name="sparetime-project" class="anchor" href="#sparetime-project"><span class="octicon octicon-link"></span></a>Sparetime Project</h3>
-
-<ul>
-<li>Sentiment Words digging in Chinese Document
-
-<ul>
-<li>A NLP project</li>
-<li>Achievements:
-
-<ul>
-<li>Word segmentation by ICTCLA</li>
-<li>Detect Sentiment Words based on HowNet</li>
-<li>Emotion tendeny judgement by Language Model plus Smooth</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Search Engine
-
-<ul>
-<li>The primary target of this project is fimilar with Hadoop</li>
-<li>Achievements:
-
-<ul>
-<li>Crawls web site</li>
-<li>Implement Hadoop Cluster</li>
-<li>Generate invert index by Map Reduce</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul><h3>
-<a name="certification" class="anchor" href="#certification"><span class="octicon octicon-link"></span></a>Certification</h3>
-
-<ul>
-<li>Computer Science
-
-<ul>
-<li>Qualification Certificate of Computer and Software Technology Proficiency</li>
-</ul>
-</li>
-</ul>
+<h1>
+<a name="%E8%B0%A2%E8%B0%A2" class="anchor" href="#%E8%B0%A2%E8%B0%A2"><span class="octicon octicon-link"></span></a>谢谢</h1>
       </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-
+    <script src="javascripts/scale.fix.js"></script>
     
-
   </body>
 </html>
